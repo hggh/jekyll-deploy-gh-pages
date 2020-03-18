@@ -10,7 +10,9 @@ bundle exec jekyll build
 echo '👍 THE SITE IS BUILT—PUSHING IT BACK TO GITHUB-PAGES'
 cd build
 remote_repo="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
-remote_branch="gh-pages" && \
+remote_branch="master" && \
+echo "remote repo: $remote_repo"
+echo "remote branch: $remote_branch"
 git init && \
 git config user.name "${GITHUB_ACTOR}" && \
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com" && \
